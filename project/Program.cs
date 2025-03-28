@@ -24,7 +24,7 @@ namespace project
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection")));
-builder.Services.AddScoped<ICategoryServices, categoryServices>);
+builder.Services.AddScoped<ICategoryServices, categoryServices>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
